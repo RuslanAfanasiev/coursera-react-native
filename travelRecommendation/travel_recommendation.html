@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBloom</title>
+    <link rel="stylesheet" href="travel_recommendation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <i class="fas fa-plane-departure logo-icon"></i>
+            <span class="brand-name">TravelBloom</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link" onclick="showAbout()">About Us</a>
+            <a href="#contact" class="nav-link" onclick="showContact()">Contact Us</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Enter a destination or keyword">
+            <i class="fas fa-search search-icon"></i>
+            <button class="btn btn-search" onclick="searchRecommendations()">Search</button>
+            <button class="btn btn-clear" onclick="clearResults()">Clear</button>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <div class="hero-content">
+            <h1 class="hero-title">EXPLORE<br>DREAM<br>DESTINATION</h1>
+            <p class="hero-description">It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.</p>
+            <a href="#" class="btn btn-book">BOOK NOW</a>
+        </div>
+
+        <!-- Search Results -->
+        <div id="searchResults" class="search-results"></div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section" style="display: none;">
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="about-content">
+            <h1 class="about-title">ABOUT US</h1>
+            <div class="about-text">
+                <p>Welcome to Our Company! We are a team of passionate individuals dedicated to providing excellent services/products to our customers. Our mission is to <strong>provide the best experience</strong> for people traveling to different destinations around the world.</p>
+                <p>Our values include integrity, innovation, customer satisfaction, and teamwork. We believe in <strong>putting our customers first</strong> and <strong>working together</strong> to achieve our goals.</p>
+                <p>Feel free to explore our website to learn more about what we offer!</p>
+            </div>
+        </div>
+        <div class="team-section">
+            <h2 class="team-title">Our Team</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <i class="fas fa-user-circle team-avatar"></i>
+                    <h3>John Doe</h3>
+                    <p>John is responsible for...</p>
+                    <span class="team-role">CEO</span>
+                </div>
+                <div class="team-card">
+                    <i class="fas fa-user-circle team-avatar"></i>
+                    <h3>Celina Thomas</h3>
+                    <p>Celina Thomas is responsible for...</p>
+                    <span class="team-role">Team Lead</span>
+                </div>
+                <div class="team-card">
+                    <i class="fas fa-user-circle team-avatar"></i>
+                    <h3>Mike Tysen</h3>
+                    <p>Mike is responsible for...</p>
+                    <span class="team-role">Delivery Head</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-section" style="display: none;">
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="contact-content">
+            <h1 class="contact-title">CONTACT US</h1>
+            <p class="contact-subtitle">Get in touch</p>
+        </div>
+        <div class="contact-form">
+            <label for="contactName">Name</label>
+            <input type="text" id="contactName" placeholder="Enter your name">
+            <label for="contactEmail">Email</label>
+            <input type="email" id="contactEmail" placeholder="Enter your email">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" rows="6" placeholder="Enter your message"></textarea>
+            <button class="btn btn-submit" onclick="submitContact()">Submit</button>
+        </div>
+    </section>
+
+    <script src="travel_recommendation.js"></script>
+</body>
+</html>
